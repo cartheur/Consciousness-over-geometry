@@ -1,0 +1,185 @@
+\documentclass[twocolumn]{article}
+\usepackage{amsmath, amssymb, graphicx, hyperref, booktabs}
+\usepackage[margin=1in]{geometry}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{A φ-Blind Computational Framework for Testing\\
+Emergent Geometric Structure in Self-Predictive Fields}
+
+\author{
+Daniel Solis, Dubito Inc. \\
+\texttt{solis@dubito-ergo.com} \\
+\texttt{https://dubito-ergo.com}
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We introduce a computational framework for testing whether self-predictive field dynamics can induce non-trivial geometric and spectral structure in an initially unbiased substrate. The model represents a complex field evolving under a free-energy-like functional incorporating diffusion, self-reference, and a predictive memory term inspired by the free energy principle. Crucially, the framework is constructed to be $\varphi$-blind: no golden ratio structure is introduced in the dynamics, geometry generation, or numerical procedures.
+
+We perform controlled experiments across random, lattice, and quasicrystalline substrates, with and without the predictive term (ablation). Preliminary results indicate that the predictive component contributes significantly to system dynamics and induces measurable differences in spectral statistics, geometric drift, and fractal organization. While tentative clustering near logarithmic scaling regimes is observed, no definitive claim of $\varphi$-selection is made. Instead, we establish a falsifiable methodology for detecting emergent invariants in self-organizing fields.
+
+This work reframes the study of consciousness-like dynamics as a problem in statistical physics and geometry, emphasizing testability over interpretation.
+\end{abstract}
+
+\section{Introduction}
+
+Understanding how structure emerges from dynamical systems remains a central problem in physics. Recent theoretical frameworks, particularly the free energy principle \cite{friston2010}, suggest that systems minimizing prediction error can exhibit rich self-organizing behavior.
+
+Inspired by this, we investigate whether a self-predictive field---a system that continuously compares its current state to its own past---can induce measurable geometric and spectral structure in the substrate it inhabits.
+
+Previous speculative work suggested a possible connection between such dynamics and special scaling constants, notably the golden ratio $\varphi$. However, such claims are highly sensitive to methodological bias. The present work addresses this directly by constructing a $\varphi$-blind experimental framework.
+
+Our goal is not to confirm any specific constant, but to test the following:
+
+\begin{quote}
+\emph{Do self-predictive dynamics induce statistically detectable, nontrivial structure in geometry and spectra?}
+\end{quote}
+
+\section{Model}
+
+\subsection{Field Definition}
+
+We define a complex field:
+\[
+C_i = A_i e^{i\theta_i}
+\]
+
+The system evolves via coupled updates of amplitude $A_i$ and phase $\theta_i$, driven by:
+
+\begin{itemize}
+\item Diffusive coupling (phase alignment)
+\item Predictive error minimization (memory-based)
+\item Self-referential amplitude coupling
+\item Entropic regularization (negentropy gradient)
+\item Stochastic noise (white or pink)
+\end{itemize}
+
+\subsection{Prediction Term}
+
+A memory buffer stores past states:
+\[
+C_i^{\text{pred}} = \sum_{k} w_k C_i(t - k)
+\]
+
+The prediction error contributes to dynamics via:
+\[
+\delta \theta_i \propto -\Im(\bar{C}_i C_i^{\text{pred}})
+\]
+
+This implements a minimal form of self-referential inference.
+
+\subsection{Geometry}
+
+The field lives on a graph defined by points $\mathbf{r}_i$ with adjacency matrix $A_{ij}$.
+
+We consider three geometry classes:
+
+\begin{itemize}
+\item Random geometric graphs
+\item Regular lattice graphs
+\item Penrose quasicrystal graphs
+\end{itemize}
+
+Importantly, no geometric construction is tuned to enforce $\varphi$-scaling.
+
+\subsection{Back-Reaction}
+
+The geometry evolves under field-dependent forces:
+\[
+\frac{d\mathbf{r}_i}{dt} \propto \sum_j W_{ij} \sin(\theta_j - \theta_i)\hat{r}_{ij}
+\]
+
+This creates a bidirectional coupling between field and geometry.
+
+\section{Experimental Design}
+
+\subsection{$\varphi$-Blind Protocol}
+
+To eliminate bias:
+
+\begin{itemize}
+\item No use of $\varphi$ in dynamics
+\item No $\varphi$-based thresholds or parameters
+\item $\varphi$ only appears in post-hoc analysis
+\end{itemize}
+
+\subsection{Ablation Study}
+
+We compare:
+
+\begin{itemize}
+\item Full model (with prediction term)
+\item Ablated model ($g_{\text{pred}} = 0$)
+\end{itemize}
+
+This isolates the role of predictive dynamics.
+
+\subsection{Measured Quantities}
+
+\begin{itemize}
+\item Global phase coherence
+\item Spectral ratios of Laplacian
+\item Geometry drift
+\item Fractal dimension (box counting)
+\item Relative contribution of prediction term
+\end{itemize}
+
+\section{Results}
+
+\subsection{Predictive Dynamics are Mechanically Active}
+
+Across all geometries, the prediction term contributes a measurable fraction of total dynamics, confirming it is not negligible.
+
+\subsection{Geometry is Dynamically Reshaped}
+
+The system exhibits consistent geometric drift under full dynamics, exceeding ablation controls. This demonstrates bidirectional coupling between field and substrate.
+
+\subsection{Emergent Spectral Structure}
+
+Preliminary analysis of Laplacian spectra reveals differences between full and ablated models. While clustering in logarithmic ratio space is observed, it is not yet statistically robust enough to claim specific constant selection.
+
+\subsection{Fractal Organization}
+
+The amplitude field develops scale-dependent structure, with fractal dimension estimates varying across runs. The presence of prediction tends to increase structural complexity.
+
+\section{Discussion}
+
+The primary result of this work is methodological: we establish a framework capable of testing whether predictive dynamics induce emergent structure.
+
+Our findings suggest:
+
+\begin{itemize}
+\item Predictive feedback alters system dynamics in measurable ways
+\item Geometry is not passive but co-evolves with the field
+\item Nontrivial spectral and spatial organization can emerge
+\end{itemize}
+
+However, claims of specific constants (e.g., $\varphi$) remain unproven. Observed tendencies require larger-scale statistical validation and stronger controls.
+
+Conceptually, the system aligns with dissipative structure formation as described by \cite{prigogine1984}, and with inference-driven dynamics in \cite{friston2010}. Whether such systems represent a primitive form of ``consciousness'' remains an open interpretive question.
+
+\section{Conclusion}
+
+We present a $\varphi$-blind computational framework for studying emergent structure in self-predictive fields. The results demonstrate that prediction-based dynamics can reshape geometry and induce nontrivial organization.
+
+Rather than confirming a specific numerical constant, this work establishes a falsifiable path forward: identifying universal signatures of predictive self-organization.
+
+\section*{Acknowledgments}
+
+We thank the open-source scientific computing community.
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{9}
+
+\bibitem{friston2010}
+K. Friston, ``The free-energy principle,'' Nature Reviews Neuroscience (2010).
+
+\bibitem{prigogine1984}
+I. Prigogine, \emph{Order Out of Chaos} (1984).
+
+\end{thebibliography}
+
+\end{document}
